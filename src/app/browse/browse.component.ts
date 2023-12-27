@@ -8,6 +8,9 @@ import { AuthService } from '../auth.service';
 })
 export class BrowseComponent {
   auth = inject(AuthService);
+  name = JSON.parse(sessionStorage.getItem("loggedInUser")!).name;
+  email = JSON.parse(sessionStorage.getItem("loggedInUser")!).email;
+  userImg = JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
 
   signOut(){
     sessionStorage.removeItem("loggedInUser");
