@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../../shared/services/auth.service';
+import { HeaderComponent } from 'src/app/core/components/header/header.component';
 
 @Component({
   selector: 'app-browse',

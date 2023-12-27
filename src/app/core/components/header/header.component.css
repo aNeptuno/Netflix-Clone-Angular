@@ -1,0 +1,49 @@
+.bg-main {
+	height: 68px;
+	z-index: 10;
+}
+.dark-nav {
+	background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+}
+.primary-navigation {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}.secondary-navigation {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    right: 4%;
+    top: 0;
+}
+.main-header {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+    padding: 0 4%;
+    position: relative;
+    transition: background-color .4s;
+    z-index: 2;
+}
+.searchTab {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.secondary-navigation .nav-element:not(:last-child) {
+    margin-right: 10px;
+}
+.nav-element {
+	color: #fff;
+}
+.account-dropdown-button .profile-icon {
+    border-radius: 4px;
+    height: 32px;
+	vertical-align: middle;
+    width: 32px;
+}
