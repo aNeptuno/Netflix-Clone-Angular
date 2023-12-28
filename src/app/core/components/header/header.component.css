@@ -34,6 +34,17 @@
     border: none;
     cursor: pointer;
     display: inline-block;
+    padding: 1px 6px;
+    margin-top: 0.2em;
+}
+.notifications .notifications-menu {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: 0.2em;
+    padding: 2px 6px 3px;
+    position: relative;
 }
 .secondary-navigation .nav-element:not(:last-child) {
     margin-right: 10px;

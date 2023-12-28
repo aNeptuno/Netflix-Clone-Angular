@@ -7,14 +7,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { BannerComponent } from './core/components/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    LoginComponent,/*
     BrowseComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent */
   ],
   imports: [
     BrowserModule,
