@@ -7,15 +7,15 @@
 
   .desc {
 	transition: all 300ms ease-in-out;
-	background-color: #181818c4;
-	height: 170px;
+	background-color: #141414;
+	height: 120px;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
   }
 
   .desc:hover {
-	transition: all 300ms ease-in-out;
+	transition: all 200ms ease-in-out;
   }
 
   .desc.tv {
@@ -26,8 +26,9 @@
 	border-radius: 5px;
 	cursor: pointer;
 	width: 300px !important;
-	height: 300px !important;
+	height: 200px !important;
 	object-fit: cover;
+	object-position: top;
   }
 
   .swiper-slide img:active {
@@ -62,4 +63,9 @@
 	  max-width: 10.5rem;
 	  border-radius: 2px;
 	}
+  }
+
+  .title {
+    font-size: 1.4vw;
+    line-height: 1.25vw;
   }
