@@ -1,7 +1,17 @@
 <app-header [userImg]="userImg"></app-header>
 
 <app-banner></app-banner>
-<app-carousel [movieContents] = "movies" [title]="'Movies'"></app-carousel>
+<app-carousel [movieContents] = "movies" [title]="'Trending Now'"></app-carousel>
+
+<app-carousel [movieContents] = "tvShows" [title]="'TV Shows'"></app-carousel>
+
+<app-carousel [movieContents] = "nowPlaying" [title]="'Continue Watching'"></app-carousel>
+
+<app-carousel [movieContents] = "popular" [title]="'Popular Movies'"></app-carousel>
+
+<app-carousel [movieContents] = "topRated" [title]="'Top Rated'"></app-carousel>
+
+<app-carousel [movieContents] = "upcoming" [title]="'Upcoming'"></app-carousel>
 
 <!-- <div class="flex items-center h-screen w-full justify-center">
 

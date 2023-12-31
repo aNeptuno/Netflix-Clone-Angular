@@ -6,6 +6,7 @@ import { MoviesService } from 'src/app/shared/services/movies.service';
 import { CarouselComponent } from 'src/app/shared/components/carousel/carousel.component';
 import { IMovieContent } from 'src/app/models/movie-contents.interface';
 import { CommonModule } from '@angular/common';
+import { forkJoin, map } from 'rxjs';
 
 @Component({
   selector: 'app-browse',
@@ -23,11 +24,37 @@ export class BrowseComponent implements OnInit{
   userImg = JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
 
   movies: IMovieContent[] = [];
+  tvShows: IMovieContent[] = [];
+  ratedMovies: IMovieContent[] = [];
+  nowPlaying: IMovieContent[] = [];
+  upcoming: IMovieContent[] = [];
+  popular: IMovieContent[] = [];
+  topRated: IMovieContent[] = [];
+
+  /* Array of Observables */
+  sources = [
+    this.movieService.getMovies(),
+    this.movieService.getTvShows(),
+    this.movieService.getRatedMovies(),
+    this.movieService.getNowPlayingMovies(),
+    this.movieService.getUpcomingMovies(),
+    this.movieService.getPopularMovies(),
+    this.movieService.getTopRated()
+  ];
   ngOnInit(): void {
-    this.movieService.getMovies()
-    .subscribe((res: any)=>{
-      console.log(res);
-      this.movies = res.results as IMovieContent[];
+    forkJoin(this.sources)
+    .pipe(
+      map(([movies, tvShows, ratedMovies, nowPlaying, upcoming, popular, topRated])=>{
+        return {movies, tvShows, ratedMovies, nowPlaying, upcoming, popular, topRated}
+      })
+    ).subscribe((res:any)=>{
+      this.movies = res.movies.results as IMovieContent[];
+      this.tvShows = res.tvShows.results as IMovieContent[];
+      this.ratedMovies = res.ratedMovies.results as IMovieContent[];
+      this.nowPlaying = res.nowPlaying.results as IMovieContent[];
+      this.upcoming = res.upcoming.results as IMovieContent[];
+      this.popular = res.popular.results as IMovieContent[];
+      this.topRated = res.topRated.results as IMovieContent[];
     })
   }
 

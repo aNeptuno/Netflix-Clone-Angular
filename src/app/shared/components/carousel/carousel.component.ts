@@ -2,10 +2,12 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '
 import { NgFor, NgForOf, NgIf } from '@angular/common';
 import Swiper from 'swiper';
 import { IMovieContent } from 'src/app/models/movie-contents.interface';
-
+import { DescPipe } from 'src/app/shared/pipes/desc.pipe';
+import { ImgPipe } from '../../pipes/img.pipe';
 
 @Component({
   selector: 'app-carousel',
+  imports: [NgFor, NgIf, DescPipe, ImgPipe ],
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
   standalone: true
@@ -13,7 +15,8 @@ import { IMovieContent } from 'src/app/models/movie-contents.interface';
 export class CarouselComponent implements OnInit, AfterViewInit{
   @Input() movieContents: IMovieContent[] = [];
   @Input () title!: string;
-  @ViewChild('swiperContainer') swiperContainer!: ElementRef
+  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
+  selectedContent: string | null = null;
   constrictor () { }
 
   ngAfterViewInit(): void {
@@ -64,5 +67,11 @@ export class CarouselComponent implements OnInit, AfterViewInit{
     })
   }
 
+  setHoverMovie(movie: IMovieContent) {
+    this.selectedContent = movie.title ?? movie.name
+  }
 
+  clearHoverMovie() {
+    this.selectedContent = null;
+  }
 }
