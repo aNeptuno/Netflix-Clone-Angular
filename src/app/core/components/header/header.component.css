@@ -1,6 +1,9 @@
 .bg-main {
 	height: 68px;
 	z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 .dark-nav {
 	background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
@@ -57,4 +60,12 @@
     height: 32px;
 	vertical-align: middle;
     width: 32px;
+}
+
+.header_change {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    background-color: #141414;
 }

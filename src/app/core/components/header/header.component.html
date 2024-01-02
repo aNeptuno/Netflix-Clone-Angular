@@ -1,6 +1,8 @@
-<header class="bg-main dark-nav sticky top-0">
+<header [class.header_change]="header_variable" class="bg-main dark-nav top-0">
 	<div class="main-header flex gap-5">
-		<img width="110" src="/assets/logo.png" alt="Netflix logo">
+		<a href="/browse">
+			<img width="120" src="/assets/logo.png" alt="Netflix logo">
+		</a>
 		<ul class="primary-navigation" *ngFor="let item of navList">
 			<li class="text-neutral-200 cursor-pointer text-sm font-extralight hover:text-gray-300 transition-[.4s]">{{item}}</li>
 		</ul>
@@ -28,7 +30,7 @@
 						<a href="/yourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="User account">
 							<span class="profile-link" role="presentation">
 								<div class="avatar-wrapper">
-									<img class="profile-icon" [src]="userImg" alt="">
+									<img class="profile-icon" [src]="userImg" alt="" referrerpolicy="no-referrer">
 									<div class="callout-arrow" style="opacity: 1; transition-duration: 150ms;"></div>
 								</div>
 							</span>
