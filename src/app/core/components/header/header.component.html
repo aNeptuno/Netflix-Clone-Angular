@@ -1,4 +1,4 @@
-<header [class.header_change]="header_variable" class="bg-main dark-nav top-0">
+<header [class.header_change]="headerVariable" class="bg-main dark-nav top-0">
 	<div class="main-header flex gap-5">
 		<a href="/browse">
 			<img width="120" src="/assets/logo.png" alt="Netflix logo">
@@ -24,7 +24,7 @@
 					</button>
 				</span>
 			</div>
-			<div class="nav-element">
+			<!-- <div class="nav-element">
 				<div class="active account-menu-item">
 					<div class="account-dropdown-button">
 						<a href="/yourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="User account">
@@ -38,7 +38,21 @@
 						<span class="caret open" role="presentation"></span>
 					</div>
 				</div>
+			</div> -->
+
+			<div class="nav-element" (mouseenter)="toggleMenu()" (mouseleave)="toggleMenu()">
+				<div class="menu-toggler h-8 w-8 overflow-hidden mb-9">
+				<a href="/yourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="User account">
+					<img class="object-cover" [src]="userImg" alt="" referrerpolicy="no-referrer">
+				</a>
+				</div>
+				<div class="menu" *ngIf="isMenuOpened">
+					<div class="menu-item">News</div>
+					<div class="menu-item">Contacts</div>
+					<div class="menu-item">About</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </header>
+

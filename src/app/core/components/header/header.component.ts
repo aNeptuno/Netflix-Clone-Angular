@@ -10,6 +10,11 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+
+  isMenuOpened: boolean = false;
+  toggleMenu(): void {
+    this.isMenuOpened = !this.isMenuOpened;
+  }
   ngOnInit() {
   }
   @Input({required: true}) userImg = '';
@@ -18,15 +23,15 @@ export class HeaderComponent implements OnInit{
   navList = ["Home", "TV Shows", "Movies", "New & Popular", "My List", "Browse by Languages"];
 
 
-  header_variable = false;
+  headerVariable = false;
   @HostListener("document:scroll")
   scrollfunction(){
     if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
     {
-      this.header_variable = true;
+      this.headerVariable = true;
     }
     else {
-      this.header_variable = false;
+      this.headerVariable = false;
     }
   }
 }
