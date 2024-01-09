@@ -4,7 +4,9 @@
 			<img width="120" src="/assets/logo.png" alt="Netflix logo">
 		</a>
 		<ul class="primary-navigation" *ngFor="let item of navList">
-			<li class="text-neutral-200 cursor-pointer text-sm font-extralight hover:text-gray-300 transition-[.4s]">{{item}}</li>
+			<li class="text-neutral-200 cursor-pointer text-sm font-extralight hover:text-gray-300 transition-[.4s]">
+				<a href="{{item.url}}">{{item.name}}</a>
+			</li>
 		</ul>
 		<div class="secondary-navigation">
 			<div class="nav-element">
@@ -20,36 +22,43 @@
 				<span class="notifications">
 					<button class="notifications-menu" aria-haspopup="true" aria-expanded="false" aria-label="Notifications">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-4z3qvp e1svuwfo1" data-name="Bell" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg>
-						<!-- <span class="notification-pill">7</span> -->
 					</button>
 				</span>
 			</div>
-			<!-- <div class="nav-element">
-				<div class="active account-menu-item">
-					<div class="account-dropdown-button">
-						<a href="/yourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="User account">
-							<span class="profile-link" role="presentation">
-								<div class="avatar-wrapper">
-									<img class="profile-icon" [src]="userImg" alt="" referrerpolicy="no-referrer">
-									<div class="callout-arrow" style="opacity: 1; transition-duration: 150ms;"></div>
-								</div>
-							</span>
-						</a>
-						<span class="caret open" role="presentation"></span>
-					</div>
-				</div>
-			</div> -->
 
-			<div class="nav-element" (mouseenter)="toggleMenu()" (mouseleave)="toggleMenu()">
-				<div class="menu-toggler h-8 w-8 overflow-hidden mb-9">
-				<a href="/yourAccount" role="button" tabindex="0" aria-haspopup="true" aria-expanded="true" aria-label="User account">
-					<img class="object-cover" [src]="userImg" alt="" referrerpolicy="no-referrer">
-				</a>
+			<div class="nav-element cursor-pointer" (click)="toggleMenu()">
+				<div class="menu-toggler h-8 w-8 overflow-hidden">
+					<img class="object-cover rounded h-8 align-middle w-8 mr-2.5" [src]="userImg" alt="" referrerpolicy="no-referrer">
 				</div>
-				<div class="menu" *ngIf="isMenuOpened">
-					<div class="menu-item">News</div>
-					<div class="menu-item">Contacts</div>
-					<div class="menu-item">About</div>
+				<div class="menu border-[hsla(0,0%,100%,0.25)] border border-solid" *ngIf="isMenuOpened">  <!-- (mouseleave)="toggleMenu()" -->
+					<ul class="pt-2.5 pb-[5px] px-0 border-b-[hsla(0,0%,100%,0.25)] border-b border-solid">
+						<div class="h-auto flex flex-row px-2.5 py-[5px]">
+							<img class="object-cover rounded h-8 align-middle w-8 mr-2.5 cursor-default" [src]="userImg" alt="Switch Profile" referrerpolicy="no-referrer">
+							<span class="pt-1.5 hover:underline cursor-pointer">
+								<a href="/yourAccount">{{username}}</a></span>
+						</div>
+					</ul>
+					<ul class="pt-2.5 pb-[5px] px-0">
+						<li class="px-2.5 py-[5px] hover:underline cursor-pointer">
+							<fa-icon [icon]="faPencil" size="lg"></fa-icon>
+							<span class="pl-[15px]">Manage Profiles</span>
+						</li>
+						<li class="px-2.5 py-[5px] hover:underline cursor-pointer">
+							<fa-icon [icon]="faArrowUpFromBracket" size="lg"></fa-icon>
+							<span class="pl-[15px]">Transfer Profile</span>
+						</li>
+						<li class="px-2.5 py-[5px] hover:underline cursor-pointer">
+							<fa-icon [icon]="faUser" size="lg"></fa-icon>
+							<span class="pl-[15px]">Account</span>
+						</li>
+						<li class="px-2.5 py-[5px] hover:underline cursor-pointer">
+							<fa-icon [icon]="faCircleQuestion" size="lg"></fa-icon>
+							<span class="pl-[15px]">Help Center</span>
+						</li>
+					</ul>
+					<ul class="pt-2.5 pb-[5px] px-0">
+						<li class="px-2.5 py-[10px] hover:underline cursor-pointer text-center border-t-[hsla(0,0%,100%,0.25)] border-t border-solid" (click)="signOut()">Sing out of Netflix</li>
+					</ul>
 				</div>
 			</div>
 		</div>
