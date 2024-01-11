@@ -1,10 +1,10 @@
-<iframe class="w-full h-full absolute" src="https://www.youtube.com/embed/b9EkMc79ZSU?&autoplay=1&loop=1&controls=0" frameborder="0" allow='autoplay'></iframe>
+<iframe class="w-full h-full absolute" [src]="videoUrl" frameborder="0" allow='autoplay'></iframe>
 
 <div class="h-screen bg-white">
 	<div class="h-full pt-[15%] px-20 absolute text-white bg-gradient-to-r from-black">
 		<div><img width="400" alt=" " class="title-logo " src="/assets/banner.png" title=" "></div>
-		<p class="info inline-block py-6 w-1/3 flex-wrap pt-[5%] text-white text-[1.2vw] font-normal leading-[normal] w-5/12 mt-[0.1vw]">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
-		<div>
+		<p class="info inline-block w-100 lg:w-5/12 flex-wrap py-[5%] text-white text-[1em] md:text-[1.2em] font-normal leading-[normal] mt-[0.1vw]">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+		<div class="flex md:flex-row flex-column">
 			<button class="cursor-pointer bg-white text-black py-3 px-8 text-xl rounded-lg hover:bg-opacity-70 transition-[.4s]">
 				<fa-icon [icon]="faPlay" size="lg"></fa-icon> <span class="pl-2 font-medium">Play</span>
 			</button>
