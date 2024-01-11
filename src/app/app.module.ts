@@ -13,6 +13,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { NewAndPopularComponent } from './pages/new-and-popular/new-and-popular.component';
 import { MyListComponent } from './pages/my-list/my-list.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

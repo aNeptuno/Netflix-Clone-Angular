@@ -4,10 +4,12 @@ import Swiper from 'swiper';
 import { IMovieContent } from 'src/app/models/movie-contents.interface';
 import { DescPipe } from 'src/app/shared/pipes/desc.pipe';
 import { ImgPipe } from '../../pipes/img.pipe';
+import { DecimalPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
-  imports: [NgFor, NgIf, DescPipe, ImgPipe ],
+  imports: [NgFor, NgIf, DescPipe, ImgPipe, DecimalPipe, CommonModule],
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
   standalone: true

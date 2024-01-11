@@ -10,7 +10,7 @@
 			  <p class="text-xs my-3">{{movie.overview | desc:89}}</p>
 			  <div class="pt-3 absolute w-[90%] bottom-1">
 				<p class="text-xs items-end text-right">
-				  <span class="text-green-500">Score: {{movie.vote_average * 10}}%</span>
+				  <span class="text-green-500">Score: {{movie.vote_average * 10 | number: '1.0-0'}}%</span>
 				</p>
 			  </div>
 			</div>
