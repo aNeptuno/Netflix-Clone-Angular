@@ -19,7 +19,7 @@ export class BannerComponent {
 
   @HostListener("document:scroll")
   scrollfunction(){
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+    if(document.documentElement.scrollTop > 300)
     {
       this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/b9EkMc79ZSU?&autoplay=0&loop=1&controls=0');
     }

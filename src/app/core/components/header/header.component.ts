@@ -2,7 +2,7 @@ import { Component, Input, inject, HostListener, Host, OnInit } from '@angular/c
 import { CommonModule } from '@angular/common';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPencil, faArrowUpFromBracket, faUser, faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faArrowUpFromBracket, faUser, faCircleQuestion, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -14,8 +14,10 @@ import { faPencil, faArrowUpFromBracket, faUser, faCircleQuestion } from '@forta
 export class HeaderComponent implements OnInit{
 
   isMenuOpened: boolean = false;
+  caretVariable: boolean = false;
   toggleMenu(): void {
     this.isMenuOpened = !this.isMenuOpened;
+    this.caretVariable = !this.caretVariable;
   }
   ngOnInit() {
   }
@@ -23,6 +25,8 @@ export class HeaderComponent implements OnInit{
   faArrowUpFromBracket = faArrowUpFromBracket;
   faUser = faUser;
   faCircleQuestion = faCircleQuestion;
+  faCaretDown = faCaretDown;
+  faCaretUp = faCaretUp;
   @Input({required: true}) userImg = '';
   username = JSON.parse(sessionStorage.getItem('loggedInUser')!).name;
   auth = inject(AuthService);

@@ -30,7 +30,7 @@
 				<div class="menu-toggler h-8 w-8 overflow-hidden">
 					<img class="object-cover rounded h-8 align-middle w-8 mr-2.5" [src]="userImg" alt="" referrerpolicy="no-referrer">
 				</div>
-				<div class="menu border-[hsla(0,0%,100%,0.25)] border border-solid" *ngIf="isMenuOpened">  <!-- (mouseleave)="toggleMenu()" -->
+				<div class="menu border-[hsla(0,0%,100%,0.25)] border border-solid" *ngIf="isMenuOpened">
 					<ul class="pt-2.5 pb-[5px] px-0 border-b-[hsla(0,0%,100%,0.25)] border-b border-solid">
 						<div class="h-auto flex flex-row px-2.5 py-[5px]">
 							<img class="object-cover rounded h-8 align-middle w-8 mr-2.5 cursor-default" [src]="userImg" alt="Switch Profile" referrerpolicy="no-referrer">
@@ -60,6 +60,11 @@
 						<li class="px-2.5 py-[10px] hover:underline cursor-pointer text-center border-t-[hsla(0,0%,100%,0.25)] border-t border-solid" (click)="signOut()">Sing out of Netflix</li>
 					</ul>
 				</div>
+			</div>
+
+			<div class="nav-element cursor-pointer" (click)="toggleMenu()">
+				<fa-icon [icon]="faCaretDown" size="sm" [class.hidden]="caretVariable"></fa-icon>
+				<fa-icon [icon]="faCaretUp" size="sm" [class.hidden]="!caretVariable" class="hidden"></fa-icon>
 			</div>
 		</div>
 	</div>

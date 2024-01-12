@@ -19,7 +19,7 @@ export class CarouselComponent implements OnInit, AfterViewInit{
   @Input () title!: string;
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   selectedContent: string | null = null;
-  constrictor () { }
+  constructor () { }
 
   ngAfterViewInit(): void {
     this.initSwiper();
@@ -30,7 +30,7 @@ export class CarouselComponent implements OnInit, AfterViewInit{
 
   private initSwiper() {
     return new Swiper(this.swiperContainer.nativeElement, {
-      slidesPerView: 3,
+      slidesPerView: 4,
       slidesPerGroup: 2,
       centeredSlides: true,
       loop: true,
