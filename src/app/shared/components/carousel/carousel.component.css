@@ -25,8 +25,8 @@
   .swiper-slide img {
 	border-radius: 5px;
 	cursor: pointer;
-	width: 300px !important;
-	height: 200px !important;
+	width: 50vw !important;
+	height: 25vh !important;
 	object-fit: cover;
 	object-position: top;
   }
@@ -47,9 +47,22 @@
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   }
 
+
   @media screen and (max-width: 599px) {
 	.swiper-slide img {
 	  max-width: 14rem;
+	  width: 25vw !important;
+	  height: 15vh !important;
+	}
+
+	.desc {
+		height: 30vh;
+		width: 50vw;
+	}
+
+	.desc img{
+		width: 45vw !important;
+		display: block;
 	}
 
 	.swiper-button-prev {

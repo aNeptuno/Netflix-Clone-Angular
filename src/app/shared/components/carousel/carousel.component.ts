@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class CarouselComponent implements OnInit, AfterViewInit{
+
+  movieVariable: boolean = true;
   @Input() movieContents: IMovieContent[] = [];
   @Input () title!: string;
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
@@ -30,15 +32,21 @@ export class CarouselComponent implements OnInit, AfterViewInit{
 
   private initSwiper() {
     return new Swiper(this.swiperContainer.nativeElement, {
-      slidesPerView: 4,
+      slidesPerView: 3,
       slidesPerGroup: 2,
       centeredSlides: true,
-      loop: true,
+      loop: false,
       breakpoints: {
+        400: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 1,
+          centeredSlides: false,
+        },
         600: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 5,
+          spaceBetween: 2,
           centeredSlides: true,
         },
         900: {
@@ -70,7 +78,7 @@ export class CarouselComponent implements OnInit, AfterViewInit{
   }
 
   setHoverMovie(movie: IMovieContent) {
-    this.selectedContent = movie.title ?? movie.name
+    this.selectedContent = movie.title ?? movie.name;
   }
 
   clearHoverMovie() {

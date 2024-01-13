@@ -1,21 +1,22 @@
-<div class="container px-20 mt-14 mb-20">
-	<p class="font-semibold text-[2.5vw] my-3 ml-3 lg:text-[1.4vw] leading-[1.25vw]">{{title}}</p>
+<div class="container px-20 mt-14 mb-10">
+	<p class="text-[3vw] my-3 ml-3 lg:text-[1.4vw] leading-[1.25vw]">{{title}}</p>
 	<div #swiperContainer class="swiper-container">
-	  <div class="swiper-wrapper">
-		<ng-container *ngFor="let movie of movieContents">
-		  <div (mouseenter)="setHoverMovie(movie)" (mouseleave)="clearHoverMovie()"  class="swiper-slide relative">
-			<img [src]="movie.poster_path | img" alt="" />
-			<div *ngIf="(movie.title === this.selectedContent) || (movie.name === this.selectedContent)" class="desc p-2">
-			  <span class="text-base flex flex-wrap font-bold">{{movie.original_title}}</span>
-			  <p class="text-xs my-3">{{movie.overview | desc:89}}</p>
-			  <div class="pt-3 absolute w-[90%] bottom-1">
-				<p class="text-xs items-end text-right">
-				  <span class="text-green-500">Score: {{movie.vote_average * 10 | number: '1.1-1'}}%</span>
-				</p>
-			  </div>
-			</div>
-		  </div>
-		</ng-container>
-	  </div>
+		<div class="swiper-wrapper">
+			<ng-container *ngFor="let movie of movieContents">
+				<div (mouseenter)="setHoverMovie(movie)" (mouseleave)="clearHoverMovie()"  class="swiper-slide relative">
+					<img [src]="movie.poster_path | img" alt=""/>
+					<div *ngIf="(movie.title === this.selectedContent) || (movie.name === this.selectedContent)" class="desc p-2">
+						<img [src]="movie.poster_path | img" alt="" class="hidden"/>
+						<span class="text-[.8rem] pt-1 md:pt-0 md:text-base flex flex-wrap font-bold">{{movie.original_title || movie.original_name}}</span>
+						<p class="text-[.5rem] md:text-xs my-3">{{movie.overview | desc:89}}</p>
+						<div class="pt-3 absolute w-[90%] bottom-1">
+							<p class="text-xs items-end text-right">
+								<span class="text-green-500">Score: {{movie.vote_average * 10 | number: '1.1-1'}}%</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</ng-container>
+		</div>
 	</div>
-  </div>
+</div>
