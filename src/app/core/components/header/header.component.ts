@@ -15,9 +15,15 @@ export class HeaderComponent implements OnInit{
 
   isMenuOpened: boolean = false;
   caretVariable: boolean = false;
+  isBrowseOpened: boolean = false;
+  browseVariable: boolean = false;
   toggleMenu(): void {
     this.isMenuOpened = !this.isMenuOpened;
     this.caretVariable = !this.caretVariable;
+  }
+  toggleBrowse(): void {
+    this.isBrowseOpened = !this.isBrowseOpened;
+    this.browseVariable = !this.browseVariable;
   }
   ngOnInit() {
   }

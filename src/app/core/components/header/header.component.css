@@ -8,58 +8,16 @@
 .dark-nav {
 	background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
 }
-.primary-navigation {
-    align-items: center;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}.secondary-navigation {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    height: 100%;
-    justify-content: flex-end;
-    position: absolute;
-    right: 4%;
-    top: 0;
-}
-.main-header {
-    align-items: center;
-    display: flex;
-    font-size: 1.2rem;
-    padding: 0 4%;
-    position: relative;
-    transition: background-color .4s;
-    z-index: 2;
-}
+
 .searchTab {
     background: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 1px 6px;
-    margin-top: 0.2em;
 }
-.notifications .notifications-menu {
-    background-color: transparent;
-    border: none;
-    font-size: 1.5em;
-    line-height: 1;
-    margin-top: 0.2em;
-    padding: 2px 6px 3px;
-    position: relative;
-}
+
 .secondary-navigation .nav-element:not(:last-child) {
     margin-right: 10px;
 }
 .nav-element {
 	color: #fff;
-}
-.account-dropdown-button .profile-icon {
-    border-radius: 4px;
-    height: 32px;
-	vertical-align: middle;
-    width: 32px;
 }
 
 .header_change {
@@ -70,13 +28,12 @@
     background-color: #141414;
 }
 
+.browse_change {
+    color: red;
+    font-size: .9rem;
+}
+
 .menu {
-    margin-left: 0;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 83px;
-    width: 220px;
     background-color: rgba(0,0,0,.8);
     font-size: 13px;
 }
