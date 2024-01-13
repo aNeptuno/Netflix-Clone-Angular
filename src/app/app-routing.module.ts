@@ -11,6 +11,7 @@ import { MyListComponent } from './pages/my-list/my-list.component';
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'browse', component: BrowseComponent},
+  {path: 'browse/genre/:id', component: TvshowsComponent},
   {path: 'yourAccount', component: YourAccountComponent},
   {path: 'tvShows', component: TvshowsComponent},
   {path: 'movies', component: MoviesComponent},

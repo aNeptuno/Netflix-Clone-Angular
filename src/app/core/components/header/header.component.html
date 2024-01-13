@@ -5,8 +5,9 @@
 		</a>
 
 		<ul class="items-center md:flex m-0 p-0 hidden" *ngFor="let item of navList">
-			<li class="text-neutral-200 cursor-pointer text-[0.7rem] md:text-sm font-extralight hover:text-gray-300 transition-[.4s]">
-				<a href="{{item.url}}">{{item.name}}</a>
+			<li (click)="onSelect(item)"  class="text-neutral-200 cursor-pointer text-[0.7rem] md:text-sm font-extralight hover:text-gray-300 transition-[.4s]">
+				<!-- <a href="{{item.url}}">{{item.name}}</a> -->
+				<a>{{item.name}}</a>
 			</li>
 		</ul>
 
@@ -16,8 +17,9 @@
 
 			<div class="menu absolute w-[220px] ml-0 p-0 left-10 top-[83px] border-[hsla(0,0%,100%,0.25)] border border-solid" *ngIf="isBrowseOpened">
 				<ul class="items-center md:flex m-0 p-0 pt-2.5 pb-[5px] px-0" *ngFor="let item of navList">
-					<li class="text-neutral-200 cursor-pointer px-2.5 py-[5px] font-extralight hover:underline transition-[.4s]">
-						<a href="{{item.url}}">{{item.name}}</a>
+					<li (click)="onSelect(item)" class="text-neutral-200 cursor-pointer px-2.5 py-[5px] font-extralight hover:underline transition-[.4s]">
+						<!-- <a href="{{item.url}}">{{item.name}}</a> -->
+						<a>{{item.name}}</a>
 					</li>
 				</ul>
 			</div>
