@@ -1,4 +1,4 @@
-import { Component, Input, inject, HostListener, Host, OnInit } from '@angular/core';
+import { Component, Input, inject, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';

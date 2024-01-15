@@ -1,0 +1,15 @@
+.header-detail_change {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 68px;
+    background-color: #141414;
+}
+
+.bg-main {
+	height: 68px;
+	z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 68px;
+}
