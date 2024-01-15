@@ -8,6 +8,7 @@ import { IMovieContent } from 'src/app/models/movie-contents.interface';
 import { CommonModule } from '@angular/common';
 import { forkJoin, map } from 'rxjs';
 
+
 @Component({
   selector: 'app-browse',
   standalone: true,

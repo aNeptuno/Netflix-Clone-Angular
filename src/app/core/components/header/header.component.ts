@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPencil, faArrowUpFromBracket, faUser, faCircleQuestion, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -26,8 +26,6 @@ export class HeaderComponent implements OnInit{
     this.isBrowseOpened = !this.isBrowseOpened;
     this.browseVariable = !this.browseVariable;
   }
-
-  constructor(private router: Router) {}
 
   ngOnInit() {}
   faPencil = faPencil;
@@ -65,9 +63,4 @@ export class HeaderComponent implements OnInit{
     this.auth.signOut();
   }
 
-  onSelect(item: any)
-  {
-    this.router.navigate(['browse/genre'], item.id);
-    console.log(item.id);
-  }
 }
