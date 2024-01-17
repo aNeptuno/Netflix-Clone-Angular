@@ -2,3 +2,9 @@
 .info {
     text-shadow: 2px 2px 4px rgba(0,0,0,.45);
 }
+
+fa-icon {
+    @media (max-width: 500px) {
+        font-size: smaller;
+    }
+}

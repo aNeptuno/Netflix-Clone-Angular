@@ -4,14 +4,13 @@ import { faPlay, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-banner',
+  selector: 'app-banner-detail',
   standalone: true,
   imports: [FontAwesomeModule],
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  templateUrl: './banner-detail.component.html',
+  styleUrls: ['./banner-detail.component.css']
 })
-export class BannerComponent {
-
+export class BannerDetailComponent {
   faPlay = faPlay;
   faCircleInfo = faCircleInfo;
 
