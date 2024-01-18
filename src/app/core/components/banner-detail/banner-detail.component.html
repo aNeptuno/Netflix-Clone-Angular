@@ -2,8 +2,13 @@
 
 <div class="h-screen bg-white">
 	<div class="h-full pt-[40%] sm:pt-[30%] md:pt-[20%] lg:pt-[15%] px-20 absolute text-white bg-gradient-to-r from-black">
-		<div><img width="400" alt=" " class="title-logo " src="/assets/banner.png" title=" "></div>
-		<p class="info inline-block w-100 lg:w-5/12 flex-wrap py-[10%] md:py-[5%] text-white text-[1em] md:text-[1.2em] font-normal leading-[normal] mt-[0.1vw]">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+		<div width="300">
+			<img width="100" src="/assets/banner-title.png" alt="">
+			<h2 class="bannerTitle pt-0 text-[3rem] md:text-[4rem]">{{bannerTitle}}</h2>
+		</div>
+		<p class="info inline-block w-100 lg:w-5/12 flex-wrap py-[10%] md:py-[5%] text-white text-[1em] md:text-[1.2em] font-normal leading-[normal] mt-[0.1vw]">
+			{{bannerOverview}}
+		</p>
 		<div class="flex flex-col sm:flex-row">
 			<button class="cursor-pointer bg-white text-black w-[50%] sm:w-[auto] mb-3 sm:mb-0 px-6 py-3 sm:py-3 sm:px-8 text-xl rounded-lg hover:bg-opacity-70 transition-[.4s]">
 				<fa-icon [icon]="faPlay" size="lg"></fa-icon> <span class="text-[18px] sm:text-[20px] pl-2 font-medium">Play</span>

@@ -9,7 +9,6 @@ import { HttpClientModule } from  '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { YourAccountComponent } from './pages/your-account/your-account.component';
 import { BrowseDetailComponent } from './pages/browse-detail/browse-detail.component';
-import { HeaderDetailComponent } from './core/components/header-detail/header-detail.component';
 
 @NgModule({
   declarations: [

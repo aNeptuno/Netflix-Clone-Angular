@@ -46,6 +46,14 @@ export class MoviesService {
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}`, options);
   }
 
+  getBannerVideoTv(id: number) {
+    return this.http.get(`https://api.themoviedb.org/3/tv/${id}/videos`, options);
+  }
+
+  getBannerDetailTv(id: number) {
+    return this.http.get(`https://api.themoviedb.org/3/tv/${id}`, options);
+  }
+
   getNowPlayingMovies() {
     return this.http.get('https://api.themoviedb.org/3/movie/now_playing', options)
   }
