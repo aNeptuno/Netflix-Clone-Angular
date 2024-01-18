@@ -51,7 +51,6 @@ export class BrowseComponent implements OnInit{
     ).subscribe((res:any)=>{
       this.movies = res.movies.results as IMovieContent[];
       this.tvShows = res.tvShows.results as IMovieContent[];
-      console.log(this.tvShows);
       this.ratedMovies = res.ratedMovies.results as IMovieContent[];
       this.nowPlaying = res.nowPlaying.results as IMovieContent[];
       this.upcoming = res.upcoming.results as IMovieContent[];

@@ -18,6 +18,7 @@ export class BannerDetailComponent implements OnChanges{
   @Input() bannerOverview = '';
   @Input() key = 'b9EkMc79ZSU';
 
+  videoVariable: boolean = false;
   constructor(private domSanitizer: DomSanitizer) {}
 
   videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.key}?&autoplay=1&loop=1&controls=0`);
@@ -25,6 +26,14 @@ export class BannerDetailComponent implements OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['key']){
       this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.key}?&autoplay=1&loop=1&controls=0`);
+
+      /* if (this.key == null)
+      {
+        this.videoVariable = true;
+      }
+      else
+        this.videoVariable = false; */
+
     }
   }
 

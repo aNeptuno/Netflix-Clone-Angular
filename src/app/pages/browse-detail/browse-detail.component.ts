@@ -7,7 +7,7 @@ import { MoviesService } from 'src/app/shared/services/movies.service';
 import { CarouselComponent } from 'src/app/shared/components/carousel/carousel.component';
 import { IMovieContent } from 'src/app/models/movie-contents.interface';
 import { CommonModule } from '@angular/common';
-import { Observable, forkJoin, map } from 'rxjs';
+import { Observable, forkJoin, map, of } from 'rxjs';
 import { HeaderDetailComponent } from 'src/app/core/components/header-detail/header-detail.component';
 
 @Component({
@@ -30,6 +30,7 @@ export class BrowseDetailComponent implements OnInit {
   bannerDetail$ = new Observable<any>();
   bannerVideo$ = new Observable<any>();
   bannerTitle: string = "";
+  key: string = "";
 
   movies: IMovieContent[] = [];
   tvShows: IMovieContent[] = [];
@@ -73,23 +74,23 @@ export class BrowseDetailComponent implements OnInit {
         map(([movies, tvShows, ratedMovies, nowPlaying, upcoming, popular, topRated])=>{
           if(this.id == 1)
           {
-            this.bannerDetail$ = this.movieService.getBannerDetailTv(tvShows.results[1].id);
-            this.bannerVideo$ = this.movieService.getBannerVideoTv(tvShows.results[1].id);
+            this.bannerDetail$ = this.movieService.getBannerDetailTv(tvShows.results[1].id) || of(null);
+            this.bannerVideo$ = this.movieService.getBannerVideoTv(tvShows.results[1].id) || of(null);
           }
           if(this.id == 2)
           {
-            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[1].id);
-            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[1].id);
+            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[1].id) || of(null);
+            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[1].id) || of(null);
           }
           if(this.id == 3)
           {
-            this.bannerDetail$ = this.movieService.getBannerDetail(popular.results[0].id);
-            this.bannerVideo$ = this.movieService.getBannerVideo(popular.results[0].id);
+            this.bannerDetail$ = this.movieService.getBannerDetail(popular.results[0].id) || of(null);
+            this.bannerVideo$ = this.movieService.getBannerVideo(popular.results[0].id) || of(null);
           }
           if(this.id == 4)
           {
-            this.bannerDetail$ = this.movieService.getBannerDetail(nowPlaying.results[1].id);
-            this.bannerVideo$ = this.movieService.getBannerVideo(nowPlaying.results[1].id);
+            this.bannerDetail$ = this.movieService.getBannerDetail(nowPlaying.results[1].id) || of(null);
+            this.bannerVideo$ = this.movieService.getBannerVideo(nowPlaying.results[1].id) || of(null);
           }
           return {movies, tvShows, ratedMovies, nowPlaying, upcoming, popular, topRated}
         })

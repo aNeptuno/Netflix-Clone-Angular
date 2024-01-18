@@ -1,4 +1,8 @@
-<iframe class="w-full h-full absolute" [src]="videoUrl" frameborder="0" allow='autoplay'></iframe>
+
+<div [class.video]="videoVariable" >
+	<iframe class="w-full h-full absolute" [src]="videoUrl" frameborder="0" allow='autoplay'></iframe>
+	<img class="w-full h-full absolute" src="" alt="">
+</div>
 
 <div class="h-screen bg-white">
 	<div class="h-full pt-[40%] sm:pt-[30%] md:pt-[20%] lg:pt-[15%] px-20 absolute text-white bg-gradient-to-r from-black">

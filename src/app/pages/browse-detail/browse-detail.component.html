@@ -1,7 +1,7 @@
 <app-header [userImg]="userImg"></app-header>
 <app-header-detail [details_title] = "d_title"></app-header-detail>
 
-<app-banner-detail [bannerTitle]="((bannerDetail$ | async)?.original_title|| (bannerDetail$ | async)?.name)" [bannerOverview]="(bannerDetail$ | async)?.overview" [key]="(bannerVideo$ | async)?.results[1].key" ></app-banner-detail>
+<app-banner-detail [bannerTitle]="((bannerDetail$ | async)?.original_title|| (bannerDetail$ | async)?.name)" [bannerOverview]="(bannerDetail$ | async)?.overview" [key]="(bannerVideo$ | async)?.results[1]?.key" ></app-banner-detail>
 
 <app-carousel [movieContents] = "tvShows" [title]="'Trending Now'"></app-carousel>
 

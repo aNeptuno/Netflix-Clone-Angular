@@ -3,3 +3,7 @@
 .bannerTitle {
 	font-family: 'DM Serif Display', serif;
 }
+
+.video {
+	display: none;
+}
