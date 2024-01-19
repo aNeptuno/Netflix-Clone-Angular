@@ -1,17 +1,30 @@
 
-<h1 align="center">Netflix clone</h1>
+# Netflix Clone Frontend Project
 
-<h2 align="center"><a href="https://netflix-clone-adiban.netlify.app/">Visit deploy</a></h2>
+A frontend project that replicates the Netflix interface. Visit the deployed site [here](https://netflix-clone-adiban.netlify.app/) 🌐🚀
 
-<div>
-	## Features
-	<ul>
-		<li>Angular CLI version 16.2.0.</li>
-		<li>It provides user authentication (OAuth)</li>
-		<li>Implements an external API to fetch movie data</li>
-		<li>Dynamic component creation</li>
-		<li>Routing and navigation</li>
-		<li>TailwindCSS</li>
-		<li>RxJs</li>
-	</ul>
-</div>
+## Features
+- **Angular CLI version 16.2.0** 🅰️🔺
+- **User Authentication (OAuth)** 🔒🔑
+- **External API Integration for Movie Data** 🌐🍿
+- **Dynamic Component Creation** 🔄🛠️
+- **Routing and Navigation** 🗺️🚀
+- **Tailwind CSS Styling** 🌈💨
+- **RxJs Library** ⚛️🔄
+
+## Screenshots
+
+*Screenshot of the home page.*
+![Home Page](readme_img/HomePage.png)
+
+*Screenshot of the views (movies).*
+![Movie Details](readme_img/MoviesPages.png)
+
+*Responsive design*
+![Responsive](readme_img/Responsive.png)
+
+*Browse Carrousel*
+![Carrousel](readme_img/BrowseMovies.png)
+
+
+
