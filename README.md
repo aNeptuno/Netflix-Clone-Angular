@@ -21,7 +21,7 @@ A frontend project that replicates the Netflix interface. Visit the deployed sit
 ![Movie Details](readme_img/MoviesPages.png)
 
 *Responsive design*
-![Responsive](readme_img/Responsive.png)
+![Responsive](readme_img/ResponsiveDesign.png)
 
 *Browse Carrousel*
 ![Carrousel](readme_img/BrowseMovies.png)
