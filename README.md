@@ -14,17 +14,17 @@ A frontend project that replicates the Netflix interface. Visit the deployed sit
 
 ## Screenshots
 
-*Screenshot of the home page.*
-![Home Page](readme_img/HomePage.png)
+### **Home Page**
+<img src="readme_img/HomePage.png" alt="Home Page" class="screenshot">
 
-*Screenshot of the views (movies).*
-![Movie Details](readme_img/MoviesPages.png)
+### **Movies Pages**
+<img src="readme_img/MoviesPages.png" alt="Movie Details" class="screenshot">
 
-*Responsive design*
-![Responsive](readme_img/ResponsiveDesign.png)
+### **Responsive Design**
+<img src="readme_img/ResponsiveDesign.png" alt="Responsive Design" class="screenshot">
 
-*Browse Carrousel*
-![Carrousel](readme_img/BrowseMovies.png)
+### **Browse Carrousel**
+<img src="readme_img/BrowseMovies.png" alt="Browse Carrousel" class="screenshot">
 
 
 
