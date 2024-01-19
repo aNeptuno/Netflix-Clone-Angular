@@ -7,14 +7,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { YourAccountComponent } from './pages/your-account/your-account.component';
 import { BrowseDetailComponent } from './pages/browse-detail/browse-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    YourAccountComponent
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
