@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit{
       theme: 'filled_blue',
       size: 'large',
       shape: 'rectangle',
-      width: 300,
+      width: 250,
       margin: 'auto'
     })
   }

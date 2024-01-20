@@ -1,6 +1,6 @@
 .bg-main {
 	height: 68px;
-	z-index: 10;
+	z-index: 100;
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,7 +23,7 @@
 .header_change {
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     background-color: #141414;
 }
