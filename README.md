@@ -1,8 +1,8 @@
 
 # Netflix Clone Frontend Project
 
-Frontend project that replicates the Netflix interface. Visit the deployed site [here](https://aneptuno.github.io/Netflix-Clone-Angular/) 
-!! This project is solely for educational purposes.
+Frontend project that replicates the Netflix interface. Visit deployed site [here](https://aneptuno.github.io/Netflix-Clone-Angular/) 
+<br>!! This project is solely for educational purposes.
 
 ## Features
 - **Angular 16.2.0** 
