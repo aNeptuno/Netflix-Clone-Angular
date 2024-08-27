@@ -1,16 +1,19 @@
 
 # Netflix Clone Frontend Project
 
-A frontend project that replicates the Netflix interface. Visit the deployed site [here](https://netflix-clone-adiban.netlify.app/) 🌐🚀
+A frontend project that replicates the Netflix interface. Visit the deployed site [here](https://netflix-clone-adiban.netlify.app/) 
+This projects has only learning purposes.
 
 ## Features
-- **Angular CLI version 16.2.0** 🅰️🔺
-- **User Authentication (OAuth)** 🔒🔑
-- **External API Integration for Movie Data** 🌐🍿
-- **Dynamic Component Creation** 🔄🛠️
-- **Routing and Navigation** 🗺️🚀
-- **Tailwind CSS Styling** 🌈💨
-- **RxJs Library** ⚛️🔄
+- **Angular 16.2.0** 
+- **User Authentication (OAuth)** 
+- **External API Integration for Movie Data** 
+- **Dynamic Component Creation** 
+- **Routing and Navigation** 
+- **Tailwind CSS Styling** 
+- **RxJs Library** 
+- **Movie database implementation**.
+
 
 ## Screenshots
 
